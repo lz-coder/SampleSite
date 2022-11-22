@@ -24,14 +24,14 @@ main {
 }
 
 .card-section {
-   display: grid; 
-   grid-template-columns: repeat(3, auto);
-   grid-template-rows: 250px;
+    display: flex;
 }
 
 .card { 
-    box-shadow: 0 0 4px #000;
     display: block;
+    width: 250px;
+    height: auto;
+    position: relative;
 }
 .card > * { float: left; }
 .card > .card-desc {
@@ -39,11 +39,14 @@ main {
     text-align: center;
     background-color: #000;
     color: #fff;
+    position: absolute;
+    bottom: 0;
 }
 .card > .card-image {
     width: 100%;
     position: relative;
     z-index: 1;
+    box-shadow: 0 0 4px #000;
 }
 
 .content-section {
@@ -135,7 +138,7 @@ main {
         height: auto;
     }
     .card-section {
-        flex-direction: column;
+        grid-template-columns: auto;
         gap: 1rem;
     }
     .main-figure > img {

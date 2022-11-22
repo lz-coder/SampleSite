@@ -14,8 +14,8 @@ function animateFigure(dir, fig) {
 
     function animateDesc() {
         card_desc.animate([
-            {transform: `translateY(-${card_desc_height})`},
-            {transform: "translateY(0)"}
+            {transform: `translateY(0)`},
+            {transform: `translateY(${card_desc_height})`}
         ],
         {
             duration: 150,
@@ -30,6 +30,7 @@ function animateFigure(dir, fig) {
         setTimeout(function() {
             animateDesc();
             card_desc.style.visibility = "visible";
+            card_desc.style.transform = `translateY(${card_desc_height})`;
         }, 100)
     } else {
         fig.style.transform = "scale(1)";
